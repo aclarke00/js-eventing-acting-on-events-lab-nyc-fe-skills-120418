@@ -16,12 +16,19 @@ const moveDodgerLeft = () => {
 }
 
 const moveDodgerRight = () => {
-
   const dodger = document.getElementById('dodger')
   const currentRight = dodger.style.left // '180px'
   let currentRightNumber = currentRight.replace('px', '') // '180'
   currentRightNumber = parseInt(currentRightNumber, 10) // 180
   dodger.style.left = currentRightNumber + 15 + 'px' // '185px' 
+}
+
+const moveDodgerUp = () => {
+  const dodger = document.getElementById('dodger')
+  const currentUp = dodger.style.left // '180px'
+  let currentRightNumber = currentUp.replace('px', '') // '180'
+  currentRightNumber = parseInt(currentRightNumber, 10) // 180
+  dodger.style.bottom = currentRightNumber + 15 + 'px' // '185px' 
 }
 
 const moveDodgerHelper = (event) => {
@@ -30,7 +37,8 @@ const moveDodgerHelper = (event) => {
     moveDodgerLeft()
   } if (event.keyCode === 39) {
     moveDodgerRight()
-  } 
+  } if (event.keyCode === 38)
+    moveDodgerUp
     
 }
 
