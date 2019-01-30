@@ -38,7 +38,7 @@ const moveDodgerHelper = (event) => {
   } if (event.keyCode === 39) {
     moveDodgerRight()
   } if (event.keyCode === 38)
-    moveDodgerUp
+    moveDodgerUp()
     
 }
 
