@@ -16,16 +16,23 @@ const moveDodgerLeft = () => {
 }
 
 const moveDodgerRight = () => {
-  
+   // get dodger first
+  const dodger = document.getElementById('dodger')
+  // next thing is changing layout / position of dodger, meaning we need css changes
+  const currentRight = dodger.style.left // '180px'
+  let currentRightNumber = currentLeft.replace('px', '') // '180'
+  currentRightNumber = parseInt(currentLeftNumber, 10) // 180
+  dodger.style.left = currentRightNumber + 15 + 'px' // '185px' 
 }
 
 const moveDodgerHelper = (event) => {
   // going to figure out if we moveDodgerLeft or moveDodgerRight
   if (event.keyCode === 37) {
     moveDodgerLeft()
-  } else {
+  } if (event.keycode === 39) {
+    moveDodgerRight()
+  } 
     
-  }
 }
 
 // 3 - add event listener
