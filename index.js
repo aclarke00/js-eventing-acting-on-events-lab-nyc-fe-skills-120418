@@ -20,7 +20,7 @@ const moveDodgerRight = () => {
   const dodger = document.getElementById('dodger')
   const currentRight = dodger.style.left // '180px'
   let currentRightNumber = currentRight.replace('px', '') // '180'
-  currentRightNumber = parseInt(currentRightNumber, 15) // 180
+  currentRightNumber = parseInt(currentRightNumber, 10) // 180
   dodger.style.left = currentRightNumber + 15 + 'px' // '185px' 
 }
 
