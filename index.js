@@ -32,7 +32,7 @@ const moveDodgerUp = () => {
   const currentUp = dodger.style.bottom // '180px'
   let currentUpNumber = currentUp.replace('px', '') // '180'
   currentUpNumber = parseInt(currentUpNumber, 10) // 180
-  if (currentUpNumber < 400) {
+  if (currentUpNumber < 380) {
   dodger.style.bottom = currentUpNumber + 15 + 'px' // '185px' 
   }
 }
