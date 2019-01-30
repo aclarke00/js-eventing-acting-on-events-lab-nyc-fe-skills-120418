@@ -16,12 +16,11 @@ const moveDodgerLeft = () => {
 }
 
 const moveDodgerRight = () => {
-   // get dodger first
+
   const dodger = document.getElementById('dodger')
-  // next thing is changing layout / position of dodger, meaning we need css changes
   const currentRight = dodger.style.left // '180px'
   let currentRightNumber = currentRight.replace('px', '') // '180'
-  currentRightNumber = parseInt(currentRightNumber, 10) // 180
+  currentRightNumber = parseInt(currentRightNumber, 15) // 180
   dodger.style.left = currentRightNumber + 15 + 'px' // '185px' 
 }
 
