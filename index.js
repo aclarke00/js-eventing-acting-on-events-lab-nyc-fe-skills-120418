@@ -31,6 +31,14 @@ const moveDodgerUp = () => {
   dodger.style.bottom = currentUpNumber + 15 + 'px' // '185px' 
 }
 
+const moveDodgerDown = () => {
+  const dodger = document.getElementById('dodger')
+  const currentDown = dodger.style.bottom // '180px'
+  let currentDownNumber = currentDown.replace('px', '') // '180'
+  currentDownNumber = parseInt(currentDownNumber, 10) // 180
+  dodger.style.bottom = currentDownNumber - 15 + 'px' // '185px' 
+}
+
 const moveDodgerHelper = (event) => {
   // going to figure out if we moveDodgerLeft or moveDodgerRight
   if (event.keyCode === 37) {
@@ -39,7 +47,8 @@ const moveDodgerHelper = (event) => {
     moveDodgerRight()
   } if (event.keyCode === 38)
     moveDodgerUp()
-    
+    if (event.keyCode === 40)
+    moveDodgerDown()
 }
 
 // 3 - add event listener
